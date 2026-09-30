@@ -1,19 +1,17 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
+from rest_framework import generics, permissions
+from core.permissions import IsOwnerOrReadOnly
 from .models import Place
 from .serializers import PlaceSerializer
 
+class PlaceListCreateView(generics.ListCreateAPIView):
+    queryset = Place.objects.select_related('category').prefetch_related('activities', 'images')
+    serializer_class = PlaceSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-@api_view(['GET'])
-def place_list(request):
-    places = Place.objects.all()
-    serializer = PlaceSerializer(places, many=True)
-    return Response(serializer.data)
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
-
-@api_view(['GET'])
-def place_detail(request, pk):
-    place = get_object_or_404(Place, pk=pk)
-    serializer = PlaceSerializer(place)
-    return Response(serializer.data)
+class PlaceDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Place.objects.select_related('category').prefetch_related('activities', 'images')
+    serializer_class = PlaceSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
