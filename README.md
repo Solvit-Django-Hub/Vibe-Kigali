@@ -11,3 +11,5 @@ Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
 ## Setup
 
 Use the existing `vk-env` virtual environment.
+
+Install packages with `pip install -r requirements.txt`.
