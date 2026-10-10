@@ -29,3 +29,5 @@ OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
 - `/api/accounts/` register, login, token refresh, and profile
 - `/api/places/` list, create, update, and delete places
 - `/api/categories/`, `/api/reviews/`, and `/api/favorites/` are currently read-only lists
+
+Admin: `http://127.0.0.1:8000/admin/`
