@@ -17,3 +17,5 @@ Install packages with `pip install -r requirements.txt`.
 Run `python manage.py migrate` before starting the server.
 
 Start the API with `python manage.py runserver`.
+
+## API docs
