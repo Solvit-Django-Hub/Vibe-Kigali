@@ -27,3 +27,4 @@ OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
 ## Endpoints
 
 - `/api/accounts/` register, login, token refresh, and profile
+- `/api/places/` list, create, update, and delete places
