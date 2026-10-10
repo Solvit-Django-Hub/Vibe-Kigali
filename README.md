@@ -21,3 +21,5 @@ Start the API with `python manage.py runserver`.
 ## API docs
 
 Swagger UI: `http://127.0.0.1:8000/api/docs/`
+
+OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
