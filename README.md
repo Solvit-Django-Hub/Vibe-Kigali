@@ -1,2 +1,35 @@
-# Vibe-Kigali
-This project is a Kigali entertainment and experience discovery platform designed to help people easily find interesting things to do and places to go in Kigali. 
+﻿# Vibe Kigali
+
+This project is a Kigali entertainment and experience discovery platform designed to help people easily find interesting things to do and places to go in Kigali.
+
+This repository is the Django REST API backend.
+
+Apps: accounts, categories, places, reviews, favorites, and core.
+
+Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
+
+## Setup
+
+Use the existing `vk-env` virtual environment.
+
+Install packages with `pip install -r requirements.txt`.
+
+Run `python manage.py migrate` before starting the server.
+
+Start the API with `python manage.py runserver`.
+
+## API docs
+
+Swagger UI: `http://127.0.0.1:8000/api/docs/`
+
+OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
+
+## Endpoints
+
+- `/api/accounts/` register, login, token refresh, and profile
+- `/api/places/` list, create, update, and delete places
+- `/api/categories/`, `/api/reviews/`, and `/api/favorites/` are currently read-only lists
+
+Admin: `http://127.0.0.1:8000/admin/`
+
+Protected routes need a JWT access token from `/api/accounts/login/`.

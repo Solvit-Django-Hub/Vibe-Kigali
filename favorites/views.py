@@ -1,9 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from drf_spectacular.utils import extend_schema
 from .models import Favorite
 from .serializers import FavoriteSerializer
 
 
+@extend_schema(responses=FavoriteSerializer(many=True))
 @api_view(['GET'])
 def favorite_list(request):
     favorites = Favorite.objects.all()
