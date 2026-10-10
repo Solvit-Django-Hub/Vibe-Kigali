@@ -7,3 +7,5 @@ This repository is the Django REST API backend.
 Apps: accounts, categories, places, reviews, favorites, and core.
 
 Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
+
+## Setup
