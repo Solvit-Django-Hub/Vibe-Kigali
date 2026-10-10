@@ -5,3 +5,5 @@ This project is a Kigali entertainment and experience discovery platform designe
 This repository is the Django REST API backend.
 
 Apps: accounts, categories, places, reviews, favorites, and core.
+
+Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
