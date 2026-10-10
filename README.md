@@ -31,3 +31,5 @@ OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
 - `/api/categories/`, `/api/reviews/`, and `/api/favorites/` are currently read-only lists
 
 Admin: `http://127.0.0.1:8000/admin/`
+
+Protected routes need a JWT access token from `/api/accounts/login/`.
