@@ -13,3 +13,5 @@ Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
 Use the existing `vk-env` virtual environment.
 
 Install packages with `pip install -r requirements.txt`.
+
+Run `python manage.py migrate` before starting the server.
