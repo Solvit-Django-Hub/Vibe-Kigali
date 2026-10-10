@@ -25,3 +25,5 @@ Swagger UI: `http://127.0.0.1:8000/api/docs/`
 OpenAPI schema: `http://127.0.0.1:8000/api/schema/`
 
 ## Endpoints
+
+- `/api/accounts/` register, login, token refresh, and profile
