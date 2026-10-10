@@ -9,3 +9,5 @@ Apps: accounts, categories, places, reviews, favorites, and core.
 Stack: Django, Django REST Framework, SimpleJWT, and drf-spectacular.
 
 ## Setup
+
+Use the existing `vk-env` virtual environment.
